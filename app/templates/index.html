@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron masthead">
+    <h1 class="text-center">
+        Welcome to Strider's Garden!<br>
+        {% if "user" not in session%}
+            <small>Feel Home</small>
+        {% else %}
+            <small>Guest's name:{{username}}</small>
+        {% endif %}
+        
+    </h1>
+</div>
+<div class="row"> 
+    <div class="col-md-8">
+        <br>
+        <label for="focus"><big>Today's Focus</big></label>
+        <p id="focus">
+            
+        </P>
+    </div>
+    <div class="col-md-4">
+        <table class="table table-bordered"><th>
+        <form action="" method="post" name="login">
+            
+            <h3>Login</h3>
+            <div class="form-group">
+                <label for="Username1">User name:</label>
+                <input type="text" class="form-control" id="Username1" name="Username1" placeholder="User name">
+            </div>
+            <div class="form-group">
+                <label for="Password1">Password:</label>
+                <input type="password" class="form-control" id="Password1" name="Password1" placeholder="Password">
+            </div>
+            <div class="checkbox">
+                <label>
+            <input type="checkbox" name="remember_me">Remember me
+            </label>
+            </div>
+            <p class="text-center">
+                <input type="submit" class="btn btn-info" value="Submit">
+            </p>
+        </form>
+        </th></table>
+    </div>
+</div>
+<div class="row">
+
+</div>
+{% endblock %}
